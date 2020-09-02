@@ -11,7 +11,7 @@ class GetRequester
   def get_response_body
     # sends a GET request to the URL passed in on initialization. This method should return the body of the response.
     new_body = URI.parse(@url)
-    #new_body.body
+    response = Net::HTTP.get_response(new_body)
   end
 
   def parse_json
