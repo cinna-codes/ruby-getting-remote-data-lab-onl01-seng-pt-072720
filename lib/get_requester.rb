@@ -17,6 +17,7 @@ class GetRequester
 
   def parse_json
     # should use get_response_body to send a request, then return a Ruby Array or Hash made up of data converted from the response of that request.
+    JSON.parse(self.get_response_body)
   end
 
 end
