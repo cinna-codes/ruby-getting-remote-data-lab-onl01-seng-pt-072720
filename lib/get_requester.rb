@@ -10,7 +10,8 @@ class GetRequester
 
   def get_response_body
     # sends a GET request to the URL passed in on initialization. This method should return the body of the response.
-    URI.parse(@url)
+    new_body = URI.parse(@url)
+    new_body.open
   end
 
   def parse_json
